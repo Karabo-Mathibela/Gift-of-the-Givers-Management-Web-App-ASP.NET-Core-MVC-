@@ -1,0 +1,41 @@
+﻿@model LoginAndRegistration.Models.IncidentR
+
+<h4>Report an Incident</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Incident" asp-action="Index" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="incident" class="control-label">Describe the Incident Below:</label>
+                <input asp-for="incident" class="form-control" />
+                <span asp-validation-for="incident" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="location" class="control-label">Provide the Location:</label>
+                <input asp-for="location" class="form-control" />
+                <span asp-validation-for="location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="itemsRequired" class="control-label">What are the Items Required?</label>
+                <input asp-for="itemsRequired" class="form-control" />
+                <span asp-validation-for="itemsRequired" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <p>
+                    <input type="submit" value="Report" class="btn btn-primary" />
+                    <input type="reset" value="Reset" class="btn btn-primary" />
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <p><a asp-action="Index" asp-controller="Home">Homepage</a></p>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

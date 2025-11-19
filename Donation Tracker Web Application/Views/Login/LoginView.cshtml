@@ -1,0 +1,49 @@
+﻿ @model LoginAndRegistration.Models.UserModel
+
+<h4>Welcome Back!</h4>
+<h6>Provide your details below to continue:</h6>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Login" asp-action="LoginView">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label">Username:</label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Password:</label>
+                <input asp-for="Password" class="form-control" type = "password"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            </br>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+                <input type="reset" value="Reset" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+</br>
+<div>
+    <a asp-controller="SignUp" asp-action="SignUp">First time here? Create an account</a>
+</div>
+</br>
+@if (@ViewBag.LoginError == true)
+{
+    <div style="color:red">
+        @ViewBag.LoginErrorMessage
+    </div>
+}
+@if (@ViewBag.UserError == true)
+{
+    <div style="color:red">
+        @ViewBag.UserErrorMessage
+    </div>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

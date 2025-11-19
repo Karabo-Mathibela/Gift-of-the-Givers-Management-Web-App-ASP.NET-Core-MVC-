@@ -1,0 +1,32 @@
+﻿@model LoginAndRegistration.Models.IncidentR
+
+<div>
+    <h4>Incident Report</h4>
+    <h6>We appreciate your concern, below is a summary:</h6>
+
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.incident)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.incident)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.location)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.itemsRequired)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.itemsRequired)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" asp-controller="Home">Continue</a>
+</div>
