@@ -8,17 +8,17 @@ The application simulates basic CRUD (Create, Read, Update, Delete) operations f
 
 The application highlights the following ASP.NET Core and C# concepts:
 
-* MVC Architecture: Clear separation between Models (data), Views (UI), and Controllers (business logic).
+* Clear separation between Models (data), Views (UI), and Controllers (business logic).
 
-* Strongly Typed Views (@model): Efficient and type-safe data passing from Controller to View.
+* Efficient and type-safe data passing from Controller to View.
 
-* Raw Razor Syntax: Demonstrates form data binding using raw HTML inputs (<input name="Property">) rather than Tag Helpers, focusing on core HTTP request principles.
+* Demonstrates form data binding using raw HTML inputs (<input name="Property">) rather than Tag Helpers, focusing on core HTTP request principles.
 
-* Transient Data Flow (ViewBag/TempData): Using ViewBag for same-request status messages (success/failure) and TempData for Post-Redirect-Get (PRG) pattern (e.g., confirmation after updating a record).
+* Using ViewBag for same-request status messages (success/failure) and TempData for Post-Redirect-Get (PRG) pattern (e.g., confirmation after updating a record).
 
-* Data Persistence (EF Core): Uses Entity Framework Core to interact with a local SQL Server database for persistent storage of inventory or user records.
+* Uses Entity Framework Core to interact with a local SQL Server database for persistent storage of inventory or user records.
 
-* Iteration and Aggregation: Uses the C# @foreach loop and Razor code blocks (@{ }) for displaying lists and calculating totals (e.g., total stock value).
+* Uses the C# @foreach loop and Razor code blocks (@{ }) for displaying lists and calculating totals (e.g., total stock value).
 
 # Getting Started
 
